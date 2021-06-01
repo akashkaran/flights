@@ -1,0 +1,91 @@
+{
+    "response":{
+   "flights" :[{
+    "airline": "Air India",
+    "departTime": "02:00am",
+    "departure": "DEL",
+    "destination": "MUM",
+    "landingTime": "04:50pm",
+    "totalTime": "14h20m",
+    "stops":[
+       
+    ],
+    "classData":[
+            { 
+                "type": "basic",
+                "fare" : 127,
+                "seats": 20
+            },
+            {  "type": "main",
+                "fare" : 212,
+                "seats": 3
+
+            },
+            {   "type": "economy",
+                "fare" : 475,
+                "seats": 5
+
+            }
+        ]
+   },
+   {
+    "airline": "Air Vistara",
+    "departTime": "03:00am",
+    "departure": "DEL",
+    "destination": "MUM",
+    "landingTime": "09:50pm",
+    "totalTime": "06h50m",
+    "stops":[
+        "PNQ"
+    ]
+    ,
+    "classData":[
+        { 
+            "type": "basic",
+            "fare" : 125,
+            "seats": 20
+        },
+        {  "type": "main",
+            "fare" : 212,
+            "seats": 3
+
+        },
+        {   "type": "economy",
+            "fare" : 475,
+            "seats": 5
+
+        }
+    ]
+   },
+   {
+    "airline": "Air Sitara",
+    "departTime": "05:00am",
+    "departure": "DEL",
+    "destination": "MUM",
+    "landingTime": "07:50pm",
+    "totalTime": "02h50m",
+    "stops":[
+        "PNQ"
+    ]
+    ,
+    "classData":[
+        { 
+            "type": "basic",
+            "fare" : 129,
+            "seats": 20
+        },
+        {  "type": "main",
+            "fare" : 212,
+            "seats": 3
+
+        },
+        {   "type": "economy",
+            "fare" : 475,
+            "seats": 5
+
+        }
+    ]
+   }
+]
+}
+}

@@ -1,0 +1,76 @@
+<form #f="ngForm">
+    <div class="grid-container">
+    <div class="error-msg" *ngIf="f.value.departure && f.value.departure === f.value.destination">Departure and Destination cannot be same</div>
+    <fieldset class="search-fields">
+        <legend>Departure</legend>
+        <input name="departure" id="departure" [value]="departure" list="source" placeholder="Airport or City" required [(ngModel)]="departure" #dep="ngModel">
+        
+        <datalist id="source">
+            <option *ngFor="let item of sourceList" [value]="item">{{item}}</option>
+        </datalist>
+    </fieldset>    
+    <div *ngIf="dep.invalid && (dep.dirty || dep.touched)" class="error-msg">
+        <div *ngIf="dep.errors?.required">
+            Departure is required.
+        </div>
+    </div>
+    <fieldset class="search-fields">
+       <legend>Destination</legend>
+       <input name="destination" value="" list="source" placeholder="Airport or City" required [(ngModel)]="destination" #dest="ngModel">
+    </fieldset>
+    <div *ngIf="dest.invalid && (dest.dirty || dest.touched)" class="error-msg">
+        <div *ngIf="dest.errors?.required">
+            Destination is required.
+        </div>
+    </div>
+    <div class="group-container">
+        <fieldset>
+            <legend>Depart date</legend>
+            <input name="departdate" value="" type="date" format="MMM dd" [min]="minDate" required [(ngModel)]="departdate" #depDate="ngModel">
+            <div *ngIf="depDate.invalid && (depDate.dirty || depDate.touched)" class="error-msg">
+                <div *ngIf="depDate.errors?.required">
+                    Date is required.
+                </div>
+            </div>
+        </fieldset>
+        <fieldset >
+            <legend>Return date</legend>
+            <input name="returndate" value="" type="date" [min]="minDate" [(ngModel)]="returndate" required  #retDate="ngModel">
+            <div *ngIf="retDate.invalid && (retDate.dirty || retDate.touched)" class="error-msg">
+                <div *ngIf="retDate.errors?.required">
+                    Date is required.
+                </div>
+            </div>
+        </fieldset>
+    </div>
+    <div class="group-container">
+    <fieldset>
+        <legend>Travelers</legend>
+        <input name="travelers" value="" type="text" [(ngModel)]="travelers" required #travel="ngModel">
+        <!-- <app-travelers-modal class="modal" id="trav"></app-travelers-modal> -->
+        <div *ngIf="travel.invalid && (travel.dirty || travel.touched)" class="error-msg">
+            <div *ngIf="travel.errors?.required">
+                Travelers are required.
+            </div>
+        </div>
+    </fieldset>
+    
+    <fieldset>
+        <legend>Class</legend>
+        <select name="class" value="" [(ngModel)]="class" required #cls="ngModel">
+            <option *ngFor="let class of classList" value="class">{{class | titlecase}}</option>
+        </select>
+        <div *ngIf="cls.invalid && (cls.dirty || cls.touched)" class="error-msg">
+            <div *ngIf="cls.errors?.required">
+                Class is required.
+            </div>
+        </div>
+    </fieldset>
+    
+    </div>
+    <button type="submit" [ngClass]="f.invalid ? 'search-button disabled' : 'search-button'" (click)="gotoResults(f)" >Search flights</button>
+    </div>
+</form>
+
+
+

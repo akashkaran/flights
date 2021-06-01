@@ -1,0 +1,27 @@
+<div class="container">
+<div class="tabs-container">
+      <div  [class.active]="selection == 'flights'" id="flights" (click)="selection ='flights'">
+        <span class="material-icons-outlined">flight</span>Flights</div>
+      <div  [class.active]="selection == 'hotels'" id="hotels" (click)="selection ='hotels'">
+        <span class="material-icons-sharp">business</span>Hotels</div>
+      <div  [class.active]="selection == 'cars'" id="cars" (click)="selection ='cars'">
+        <span class="material-icons-sharp">directions_car</span>Cars</div>
+      <div  [class.active]="selection == 'activity'" id="activity" (click)="selection ='activity'">
+        <span class="material-icons-sharp">outlined_flag</span>Activity</div>
+</div>
+<div [ngSwitch]="selection" class="tab-body">
+  <div  *ngSwitchCase="'flights'">
+    <app-flights></app-flights>
+  </div>
+  <div *ngSwitchCase="'hotels'">
+    <app-dummy></app-dummy>
+  </div>
+  <div *ngSwitchCase="'cars'">
+    <app-dummy></app-dummy>
+  </div>
+  <div *ngSwitchCase="'activity'">
+    <app-dummy></app-dummy>
+  </div>
+</div>
+</div>
+

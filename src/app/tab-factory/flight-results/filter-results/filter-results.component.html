@@ -1,0 +1,45 @@
+<form #filterForm="ngForm">
+    <div class="range cards">
+        <h4>Price Range</h4>
+    <hr>
+    <div class="filter-container">
+        <div>
+            <fieldset>
+                <legend>Minimum Price</legend>
+                <input name="minprice" [(value)]="min" [(ngModel)]="min">
+            </fieldset>   
+            <fieldset>
+                <legend>Maximum Price</legend>
+                <input name="maxprice"  [(value)]="max" [(ngModel)]="max">
+            </fieldset> 
+        </div>
+    </div>
+    <input type="range" min="0" [max]="max" [(ngModel)]="min" name="min" #ran="ngModel">
+    <input type="range" [min]="min" max="99999" [(ngModel)]="max" name="max" #ran1="ngModel">
+    </div>
+    
+    <div class="class cards">
+        <h4>Booking class</h4>
+        <hr>
+        <div class="class-group">
+            <div>
+                <input type="checkbox" id="economy" value="" name ="economy" ngModel>
+                <label for="economy">Economy</label>
+            </div>
+            <div>
+                <input type="checkbox" id="main" value="" name ="main" ngModel>
+                <label for="main">Main</label>
+            </div>
+            <div>
+                <input type="checkbox" id="basic" value="" name ="basic" ngModel>
+                <label for="basic">Basic</label>
+            </div>
+    
+        </div>
+    </div>
+    <div class="buttons cards">
+            <button id="btn1" (click)="resetAll()">Reset all</button>
+            <button  id="btn2" (click)="filterResults(filterForm.value)">Apply</button>
+    </div>
+    
+</form>

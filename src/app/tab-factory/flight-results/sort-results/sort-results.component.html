@@ -1,0 +1,49 @@
+<div class="sort-container">
+    <div></div>
+    <div class="form-container">
+        <form #sortCriteria="ngForm">
+            <div><input type="radio" id="lowprice" name="sort" value="lowprice" [(ngModel)]="name">
+                <label for="lowprice">Price (Lowest to Highest)</label>
+            </div>
+    
+            <div>
+                <input type="radio" id="highprice" name="sort" value="highprice" [(ngModel)]="name">
+                <label for="highprice">Price (Highest to Lowest )</label><br>
+            </div>
+    
+            <div>
+                <input type="radio" id="shortduration" name="sort" value="shortduration" [(ngModel)]="name">
+                <label for="shortduration">Duration (Shortes to Longest)</label><br>
+            </div>
+    
+            <div>
+                <input type="radio" id="longduration" name="sort" value="longduration" [(ngModel)]="name">
+                <label for="longduration">Duration (Longest to Shortes)</label><br>
+            </div>
+    
+            <div>
+                <input type="radio" id="departure" name="sort" value="departure" [(ngModel)]="name">
+                <label for="departure">Departure (Earliest to Latest)</label><br>
+            </div>
+    
+            <div>
+                <input type="radio" id="arrival" name="sort" value="arrival" [(ngModel)]="name">
+                <label for="arrival">Arrival (Earliest to Latest)</label><br>
+            </div>
+    
+            <div>
+                <input type="radio" id="airlineasc" name="sort" value="airlineasc" [(ngModel)]="name">
+                <label for="airlineasc">Airline (A to Z)</label><br>
+            </div>
+    
+            <div>
+                <input type="radio" id="airlinedesc" name="sort" value="airlinedesc" [(ngModel)]="name">
+                <label for="airlinedesc">Airline (Z to A)</label><br>
+            </div>
+    
+        <button class="sort-button" type="submit" (click)="sortData(sortCriteria.value)">Done</button>
+    </form>
+    </div>
+    
+<div></div>
+</div>
