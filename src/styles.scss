@@ -1,1 +1,53 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~material-icons/iconfont/material-icons.css';
+body,p,a,ul,li {
+    margin: 0;
+    padding: 0;
+
+}
+
+/* variables */
+
+ $theme-color : rgb(0, 101, 168);
+$secondary-color : cornsilk;
+/* font */
+body {
+    font-family: sans-serif;
+}
+
+.title, .navbar{
+    text-align: center;
+    background-color: $theme-color;
+    color: $secondary-color;
+    padding: 15px;
+    position: sticky;
+    top:0;
+    box-sizing: border-box;
+    font-size: x-large;
+}
+
+#sub {
+    color: rgb(10, 173, 248);
+}
+
+.cards{
+    //display: flex;
+    height: 250px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px 0 rgba(146, 182, 184, 0.959), 0 6px 20px 0 rgba(183, 217, 223, 0.924);
+}
+
+.back-button, .edit-button{
+    background-color: transparent;
+    border: none;
+    color:  $secondary-color;
+    cursor: pointer;
+}
+
+// .navbar{
+//     text-align: center;
+//     position: sticky;
+//     background-color: rgb(0, 101, 168);
+//     color: cornsilk;
+//     padding: 10px;
+// }

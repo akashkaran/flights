@@ -1,7 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
-const routes: Routes = [];
+import { HomePageComponent } from './home-page/home-page.component'
+import { DummyComponent } from './tab-factory/dummy/dummy.component';
+import { FlightResultsComponent } from './tab-factory/flight-results/flight-results.component';
+const routes: Routes = [
+  {path: '', component: HomePageComponent},
+  {path: 'flights', component: FlightResultsComponent},
+  // {path: 'dummy', component: DummyComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
