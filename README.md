@@ -1,5 +1,7 @@
 # FlightSearch
 
+Flight searching mobile app UI build using angular, css/scss and javascript from scratch.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.2.
 
 ## Development server
