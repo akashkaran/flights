@@ -11,7 +11,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlightResultsComponent } from './tab-factory/flight-results/flight-results.component';
 import { SortResultsComponent } from './tab-factory/flight-results/sort-results/sort-results.component';
 import { FilterResultsComponent } from './tab-factory/flight-results/filter-results/filter-results.component';
-//import { TravelersModalComponent } from './tab-factory/flights/travelers-modal/travelers-modal.component';
 import { HttpClientModule } from '@angular/common/http';
 
 
@@ -25,7 +24,6 @@ import { HttpClientModule } from '@angular/common/http';
     FlightResultsComponent,
     SortResultsComponent,
     FilterResultsComponent,
-    //TravelersModalComponent
   ],
   imports: [
     BrowserModule,

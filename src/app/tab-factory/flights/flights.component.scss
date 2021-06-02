@@ -1,83 +1,105 @@
-
+$theme-color: rgb(0, 101, 168);
+$secondary-color: cornsilk;
 form {
-  overflow: hidden;
+    overflow: hidden;
 }
+
 .grid-container {
     display: grid;
     margin-top: 15px;
     justify-content: stretch;
     grid-template-columns: 1fr;
     // margin: 10px;
-    gap:15px;
+    gap: 15px;
     box-sizing: border-box;
     width: 100%;
     padding: 15px;
     // grid-template-columns: auto !important;
     // grid-template-rows: auto !important; 
     // grid-template-columns: repeat(minmax(240px, 1fr));
-  }
+}
 
-  .group-container {
+.group-container {
     display: grid;
-    gap:10px;
+    gap: 10px;
     grid-template-columns: 1fr 1fr;
-  }
+}
 
-  .error-msg {
+.error-msg {
     color: rgb(187, 5, 5);
-  }
+}
 
-  .search-button{
-   background-color: rgb(8, 143, 8);
-   padding: 15px;
-   color: white;
-   border: yellowgreen;
-   border-radius: 5px;
-   cursor: pointer;
-   font-size: large;  
-  // margin: 7px;
-   
-  }
+.search-button {
+    background-color: rgb(8, 143, 8);
+    padding: 15px;
+    color: white;
+    border: yellowgreen;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: large;
+    // margin: 7px;
+}
 
-  .disabled{
+.disabled {
     //background-color: rgb(94, 124, 94);
     cursor: not-allowed;
-  }
+}
 
-  .search-button:hover {
+.search-button:hover {
     background-color: rgb(9, 160, 9);
-  }
+}
 
-
-  fieldset {
+fieldset {
     border-radius: 5px;
     //padding: 12px;
-  }
+}
 
-  input, textarea, select {
+input,
+textarea,
+select {
     border: none;
     margin: 0;
     padding: 0;
     width: -webkit-fill-available;
-    height: -webkit-fill-available;;
-    background: rgba(255,255,255,0.05);
+    height: -webkit-fill-available;
+    ;
+    background: rgba(255, 255, 255, 0.05);
+}
 
+.modal {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    overflow: auto;
+}
 
-  }
+.travelers-container {
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 1;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
 
-    .modal {
-      display: none; /* Hidden by default */
-      position: inherit; /* Stay in place */
-      z-index: 1; /* Sit on top */
-      // padding-top: 100px; /* Location of the box */
-      left: 0;
-      top: 0;
-      //width: 100%; /* Full width */
-      //height: 100%; /* Full height */
-      overflow: auto; /* Enable scroll if needed */
-      background-color: rgb(0,0,0); /* Fallback color */
-      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    
-  }
-
-  
+.counter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    input {
+        padding: 10px;
+        width: 30px;
+    }
+    label {
+        padding: 10px;
+    }
+    button {
+        background-color: $theme-color;
+        color: $secondary-color;
+        border-radius: 5px;
+        border-color: rgb(5, 126, 226);
+    }
+}

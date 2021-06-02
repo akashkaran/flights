@@ -1,31 +1,25 @@
-
 .sort-container {
-  display: grid;
-  grid-template-columns: 0 auto 0;
-  align-items: center;
-  flex-direction: column;
-  font-size: larger;
-  top:0;
-
-  div {
-    padding: 10px 10px 20px 10px;
-    label {
-      margin-left: 5px;
+    display: grid;
+    grid-template-columns: 0 auto 0;
+    align-items: center;
+    flex-direction: column;
+    font-size: larger;
+    div {
+        padding: 10px 10px 20px 10px;
+        label {
+            margin-left: 5px;
+        }
     }
-  }
-
 }
 
-
-
-button{
-background-color: rgb(8, 143, 8);
-padding: 15px;
-color: white;
-border: yellowgreen;
-border-radius: 5px;
-cursor: pointer;
-font-size: large;  
-margin: 7px;
-width: -webkit-fill-available;
+button {
+    background-color: rgb(8, 143, 8);
+    padding: 15px;
+    color: white;
+    border: yellowgreen;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: large;
+    margin: 7px;
+    width: -webkit-fill-available;
 }

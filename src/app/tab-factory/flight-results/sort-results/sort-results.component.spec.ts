@@ -8,10 +8,10 @@ describe('SortResultsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports : [FormsModule, ReactiveFormsModule],
-      declarations: [ SortResultsComponent, ]
+      imports: [FormsModule, ReactiveFormsModule],
+      declarations: [SortResultsComponent,]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
@@ -25,16 +25,14 @@ describe('SortResultsComponent', () => {
   });
 
   it('should correctly @Output value of text input in component', () => {
-    spyOn(component.showSortEmitter, 'emit'); 
+    spyOn(component.showSortEmitter, 'emit');
     const button = fixture.nativeElement.querySelector('button');
     const input = fixture.nativeElement.querySelector('#lowprice').value;
-    component.sortData({sort:input});
-    //.value = 'lowprice'; 
-    // const inputText = fixture.nativeElement.querySelector('#lowprice').value;
-    button.click(); 
+    component.sortData({ sort: input });
+    button.click();
     fixture.detectChanges();
-    expect(component.showSortEmitter.emit).toHaveBeenCalledWith({sort:'lowprice'}); 
+    expect(component.showSortEmitter.emit).toHaveBeenCalledWith({ sort: 'lowprice' });
   });
 
-  
+
 });

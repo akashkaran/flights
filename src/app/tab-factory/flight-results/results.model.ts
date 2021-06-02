@@ -1,4 +1,4 @@
 export interface responseModel {
-response:any;
-status?:string;
+    response: any;
+    status?: string;
 }

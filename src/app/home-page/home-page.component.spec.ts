@@ -9,9 +9,9 @@ describe('HomePageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HomePageComponent ]
+      declarations: [HomePageComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
@@ -25,8 +25,8 @@ describe('HomePageComponent', () => {
   });
 
   it('Nav bar should have title as "cxLoyalty"', () => {
-    const title= fixture.nativeElement.querySelector('#app-title').textContent.trim();
+    const title = fixture.nativeElement.querySelector('#app-title').textContent.trim();
     expect(title).toContain('cxLoyalty');
-    
+
   });
 });

@@ -2,17 +2,17 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { FlightResultsComponent } from './flight-results.component';
 
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 describe('FlightResultsComponent', () => {
   let component: FlightResultsComponent;
   let fixture: ComponentFixture<FlightResultsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports : [RouterTestingModule, HttpClientModule],
-      declarations: [ FlightResultsComponent ],
+      imports: [RouterTestingModule, HttpClientModule],
+      declarations: [FlightResultsComponent],
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
@@ -33,7 +33,6 @@ describe('FlightResultsComponent', () => {
 
   it('Edit button should be present', () => {
     const btn = fixture.nativeElement.querySelector('.edit-button');
-    console.log(btn);
     expect(btn.textContent).toBe('edit');
   });
 
@@ -60,32 +59,28 @@ describe('FlightResultsComponent', () => {
     expect(component.filterData).toHaveBeenCalledTimes(0);
     let res = component.filterResults('test');
     expect(component.filterData).toHaveBeenCalledTimes(1);
-  }); 
+  });
 
   it('sortResults should get called for diffrent values', () => {
     spyOn(component, 'sortBy')
     component.data = []
-    const cases=['lowprice', 'highprice', 'airlineasc', 'airlinedesc',
-    'departure', 'longduration', 'arrival', ,'shortduration', 'default'];
-    for(let cse of cases){
-      component.sortResults({sort:cse});
+    const cases = ['lowprice', 'highprice', 'airlineasc', 'airlinedesc',
+      'departure', 'longduration', 'arrival', , 'shortduration', 'default'];
+    for (let cse of cases) {
+      component.sortResults({ sort: cse });
     }
     expect(component.sortBy).toHaveBeenCalledTimes(8);
-    
   });
 
   it('sortBy should get called for diffrent values', () => {
     spyOn(component, 'convertInSecs')
-    component.filteredData = [{classData:[{fare:0}]},{classData:[{fare:5}]}]
+    component.filteredData = [{ classData: [{ fare: 0 }] }, { classData: [{ fare: 5 }] }]
     component.sortBy('departTime');
-    // const cases=['lowprice', 'highprice', 'airlineasc', 'airlinedesc', 'arrival','default'];
     expect(component.convertInSecs).toHaveBeenCalledTimes(2);
     component.sortBy('test');
     component.sortBy('test', false);
     component.sortBy('fare');
     component.sortBy('fare', false);
-
-    
   });
 
 

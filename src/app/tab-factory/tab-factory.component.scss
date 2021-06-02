@@ -1,18 +1,15 @@
-
-
- $theme-color : rgb(0, 101, 168);
- $secondary-color : cornsilk;
-
-.tabs-container{
+$theme-color: rgb(0, 101, 168);
+$secondary-color: cornsilk;
+.tabs-container {
     display: grid;
-    grid-template-columns:  110px 110px 110px 110px;
+    grid-template-columns: 110px 110px 110px 110px;
     overflow-x: scroll;
     scrollbar-width: none; // for Mozilla
     -ms-overflow-style: none; // for IE
     //justify-content: stretch;
-     //width: 500px;
+    //width: 500px;
     // grid-template-columns: 1fr
-    div{
+    div {
         display: inline-block;
         padding: 12px 15px 12px 15px !important;
         cursor: pointer;
@@ -21,28 +18,24 @@
         margin-right: 2px;
         border-bottom: 2px solid rgb(161, 161, 163);
     }
-
-    .active{
-         border-bottom: 2px solid rgb(3, 90, 141);
-         color: rgb(3, 90, 141);
+    .active {
+        border-bottom: 2px solid rgb(3, 90, 141);
+        color: rgb(3, 90, 141);
     }
-
     span {
         font-size: inherit;
         padding-right: 2px;
     }
-   
 }
 
 .tabs-container::-webkit-scrollbar {
     display: none;
-  }
+}
 
-.container{
+.container {
     display: grid;
     overflow-x: overlay;
     justify-content: center;
-
 }
 
 .tab-body {

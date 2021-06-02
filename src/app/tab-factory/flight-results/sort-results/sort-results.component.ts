@@ -6,7 +6,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./sort-results.component.scss']
 })
 export class SortResultsComponent implements OnInit {
-
+  name: string;
   constructor() { }
   @Output() showSortEmitter = new EventEmitter<any>();
 
@@ -14,11 +14,10 @@ export class SortResultsComponent implements OnInit {
   }
 
   sortData(params) {
-    console.log(params);
-    
+    this.name = null;
     this.showSortEmitter.emit(params)
   }
 
-  
+
 
 }

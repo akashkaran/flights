@@ -1,7 +1,5 @@
-
- $theme-color : rgb(0, 101, 168);
- $secondary-color : cornsilk;
- 
+$theme-color: rgb(0, 101, 168);
+$secondary-color: cornsilk;
 .stops-line {
     border-bottom: 2px solid #098119;
     width: -webkit-fill-available;
@@ -11,8 +9,8 @@
 
 .navbar {
     padding: 0px;
-   
 }
+
 .dot {
     height: 5px;
     width: 5px;
@@ -20,17 +18,18 @@
     background-color: rgb(13, 117, 4);
     border-radius: 50%;
     display: inline-block;
-  }
-  .search-summary {
-      display: flex;
-      flex-direction: column;
-      font-size: small;
-      align-items: center;
+}
 
-      div {
+.search-summary {
+    display: flex;
+    flex-direction: column;
+    font-size: small;
+    align-items: center;
+    div {
         display: flex;
-      }
-  }
+    }
+}
+
 .container {
     display: flex;
     text-align: center;
@@ -38,26 +37,20 @@
     align-items: center;
     padding-left: 10px;
     justify-content: space-between;
-
     div {
         padding: 5px;
     }
-  
-
 }
 
 .card-footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     overflow-x: overlay;
-    //flex-direction: row;
-    //justify-content: center;
     padding-top: 15px;
     width: fill;
     span {
         position: inherit;
         float: right;
-        /* left: 0; */
         top: 0;
         margin: -8px 12px;
         padding-inline: 3px;
@@ -69,7 +62,7 @@
         color: rgb(66, 39, 9);
         z-index: 10;
         right: 0;
-        }
+    }
 }
 
 .header {
@@ -78,7 +71,6 @@
     grid-template-columns: 30px 200px;
     font-size: large;
     padding: 1em 0 0 1em;
-     
     align-items: center;
 }
 
@@ -87,67 +79,56 @@
     grid-template-columns: 30px 30px 30px;
     padding: 10px 20px 10px 20px;
     border: 1px solid rgb(9, 150, 243);
-    //padding: 5px;
     overflow-x: scroll;
     scrollbar-width: none; // for Mozilla
     -ms-overflow-style: none; // for IE
-    background-color:  $theme-color;
+    background-color: $theme-color;
     margin-left: 5px;
-    //width: fill;
     margin-right: 5px;
     border-radius: 5px;
-    color:  $secondary-color;
-    box-shadow:  2px 2px 2px rgba(0, 0, 0, 0.2);
-    //width: 80px;
+    color: $secondary-color;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
     p {
         margin: 0%;
         text-align: start;
     }
-
     h4 {
-        margin: 0%; 
+        margin: 0%;
     }
 }
 
 .footer-body::-webkit-scrollbar {
     display: none;
-  }
+}
 
-  .title{
-      text-align: center;
-  }
+.title {
+    text-align: center;
+}
+
 .float-buttons {
     bottom: 50px;
     position: sticky;
-    // margin-top: 99%;
     display: flex;
     text-align: center;
     flex-direction: row;
     justify-content: center;
-    
     button {
         padding: 10px 20px 10px 20px;
         width: 100px;
         background-color: white;
         color: #0B5971;
-        font-size: large;  
+        font-size: large;
         text-align: center;
-        box-shadow:  2px 8px 2px rgba(0, 0, 0, 0.2), 3px 10px 3px rgba(0, 0, 0, 0.19);
-        border:1px solid rgb(174, 177, 179);
+        box-shadow: 2px 8px 2px rgba(0, 0, 0, 0.2), 3px 10px 3px rgba(0, 0, 0, 0.19);
+        border: 1px solid rgb(174, 177, 179);
         cursor: pointer;
-
-        }
-
-        .button2 {
-            margin-left: 0%;
-            border-radius: 0 5px 5px 0;
-            }
-            
-        .button1 {
+    }
+    .button2 {
+        margin-left: 0%;
+        border-radius: 0 5px 5px 0;
+    }
+    .button1 {
         margin-right: 0%;
         border-radius: 5px 0 0 5px;
-        }
+    }
 }
-
-    
-

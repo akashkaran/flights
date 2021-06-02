@@ -7,16 +7,16 @@ describe('FormService', () => {
   let service: FormService;
   let httpMock: HttpTestingController;
   const dummy = {
-    response :{
-      test:'PASS'
+    response: {
+      test: 'PASS'
     }
   };
-  const url:string = './../../../assets/data.json'
+  const url: string = './../../../assets/data.json'
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports:[HttpClientTestingModule],
-      providers:[]
+      imports: [HttpClientTestingModule],
+      providers: []
     });
     service = TestBed.inject(FormService);
     httpMock = TestBed.inject(HttpTestingController)
@@ -28,15 +28,15 @@ describe('FormService', () => {
   });
 
   it('should be created', () => {
-   service.getFlightResults().subscribe( res =>{
-     expect(res['response']).toBe(dummy.response);
-   });
+    service.getFlightResults().subscribe(res => {
+      expect(res['response']).toBe(dummy.response);
+    });
 
-   const req = httpMock.expectOne(url);
-   expect(req.request.method).toBe('GET');
-   req.flush(dummy);
+    const req = httpMock.expectOne(url);
+    expect(req.request.method).toBe('GET');
+    req.flush(dummy);
   });
-  
+
 
 
 

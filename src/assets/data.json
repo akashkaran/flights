@@ -1,91 +1,84 @@
 {
-    "response":{
-   "flights" :[{
-    "airline": "Air India",
-    "departTime": "02:00am",
-    "departure": "DEL",
-    "destination": "MUM",
-    "landingTime": "04:50pm",
-    "totalTime": "14h20m",
-    "stops":[
-       
-    ],
-    "classData":[
-            { 
-                "type": "basic",
-                "fare" : 127,
-                "seats": 20
+    "response": {
+        "flights": [{
+                "airline": "Air India",
+                "departTime": "02:00am",
+                "departure": "DEL",
+                "destination": "MUM",
+                "landingTime": "04:50pm",
+                "totalTime": "14h20m",
+                "stops": [],
+                "classData": [{
+                        "type": "basic",
+                        "fare": 1127,
+                        "seats": 20
+                    },
+                    {
+                        "type": "main",
+                        "fare": 2112,
+                        "seats": 3
+                    },
+                    {
+                        "type": "economy",
+                        "fare": 4715,
+                        "seats": 5
+                    }
+                ]
             },
-            {  "type": "main",
-                "fare" : 212,
-                "seats": 3
-
+            {
+                "airline": "Air Vistara",
+                "departTime": "03:00am",
+                "departure": "DEL",
+                "destination": "MUM",
+                "landingTime": "09:50pm",
+                "totalTime": "06h50m",
+                "stops": [
+                    "PNQ"
+                ],
+                "classData": [{
+                        "type": "basic",
+                        "fare": 1255,
+                        "seats": 20
+                    },
+                    {
+                        "type": "main",
+                        "fare": 2152,
+                        "seats": 5
+                    },
+                    {
+                        "type": "economy",
+                        "fare": 4755,
+                        "seats": 5
+                    }
+                ]
             },
-            {   "type": "economy",
-                "fare" : 475,
-                "seats": 5
-
+            {
+                "airline": "Air Sitara",
+                "departTime": "05:00am",
+                "departure": "DEL",
+                "destination": "MUM",
+                "landingTime": "07:50pm",
+                "totalTime": "02h50m",
+                "stops": [
+                    "PNQ"
+                ],
+                "classData": [{
+                        "type": "basic",
+                        "fare": 1299,
+                        "seats": 4
+                    },
+                    {
+                        "type": "main",
+                        "fare": 2192,
+                        "seats": 6
+                    },
+                    {
+                        "type": "economy",
+                        "fare": 1475,
+                        "seats": 5
+                    }
+                ]
             }
         ]
-   },
-   {
-    "airline": "Air Vistara",
-    "departTime": "03:00am",
-    "departure": "DEL",
-    "destination": "MUM",
-    "landingTime": "09:50pm",
-    "totalTime": "06h50m",
-    "stops":[
-        "PNQ"
-    ]
-    ,
-    "classData":[
-        { 
-            "type": "basic",
-            "fare" : 125,
-            "seats": 20
-        },
-        {  "type": "main",
-            "fare" : 212,
-            "seats": 3
-
-        },
-        {   "type": "economy",
-            "fare" : 475,
-            "seats": 5
-
-        }
-    ]
-   },
-   {
-    "airline": "Air Sitara",
-    "departTime": "05:00am",
-    "departure": "DEL",
-    "destination": "MUM",
-    "landingTime": "07:50pm",
-    "totalTime": "02h50m",
-    "stops":[
-        "PNQ"
-    ]
-    ,
-    "classData":[
-        { 
-            "type": "basic",
-            "fare" : 129,
-            "seats": 20
-        },
-        {  "type": "main",
-            "fare" : 212,
-            "seats": 3
-
-        },
-        {   "type": "economy",
-            "fare" : 475,
-            "seats": 5
-
-        }
-    ]
-   }
-]
-}
+    }
 }

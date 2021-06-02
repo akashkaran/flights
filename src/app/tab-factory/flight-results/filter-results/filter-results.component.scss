@@ -1,27 +1,25 @@
-
- $theme-color : rgb(0, 101, 168);
- $secondary-color : cornsilk;
-.filter-container{
-    display:  flex;
-    flex-direction: row;
-        div {
-            display: grid;
-            gap:10px;
-            grid-template-columns: auto auto;
-          }
-   
-
-
-}
-
-.range{
+$theme-color: rgb(0, 101, 168);
+$secondary-color: cornsilk;
+.range {
     padding: 10px;
     height: 220px;
-
-    input {
+    >input {
+        width: fit-content;
         padding: 10px;
         width: fill;
-   
+    }
+}
+
+.filter-container {
+    display: flex;
+    flex-direction: row;
+    div {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: auto auto;
+        input {
+            width: 50%;
+        }
     }
 }
 
@@ -38,10 +36,9 @@
         padding: 10px;
         display: flex;
     }
-    //grid-template-rows: 1fr 1fr 1fr;
 }
 
-.buttons{
+.buttons {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: fill;
@@ -51,7 +48,6 @@
     gap: 20px;
     height: fit-content;
     box-shadow: none;
-
     button {
         padding: 20px;
         border-radius: 5px;
@@ -61,14 +57,13 @@
 }
 
 #btn2 {
-    background-color:  $theme-color;
-    color:  $secondary-color;
+    background-color: $theme-color;
+    color: $secondary-color;
     border: 1px solid rgb(3, 120, 197);
 }
 
 #btn1 {
-    background-color:  white;
-    color : rgb(165, 158, 158);
+    background-color: white;
+    color: rgb(165, 158, 158);
     border: 1px solid rgb(165, 158, 158);
-
 }

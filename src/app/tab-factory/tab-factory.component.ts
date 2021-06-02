@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class TabFactoryComponent implements OnInit {
 
   constructor() { }
-  selection:string;
+  selection: string;
   ngOnInit(): void {
     this.selection = 'flights';
   }

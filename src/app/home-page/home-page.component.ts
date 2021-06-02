@@ -6,12 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent implements OnInit {
-  sub:string = 'cx'
-  title:string = 'Loyalty';
+  sub: string = 'cx'
+  title: string = 'Loyalty';
   constructor() { }
 
   ngOnInit(): void {
-  
+
   }
 
 }
