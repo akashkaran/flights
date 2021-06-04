@@ -47,11 +47,15 @@ describe('FlightsComponent', () => {
 
   });
 
-  it('should navigate to flight results after clicking on search button', () => {
+  it('validation message should get shown after clicking on empty form', () => {
+    let msg = fixture.nativeElement.querySelector('.error-msg');
+    expect(msg).toBeNull();
     const button = fixture.nativeElement.querySelector('#flight-search');
     button.click();
     fixture.detectChanges();
-    expect(router.navigate).toHaveBeenCalledWith(['flights']);
+    msg = fixture.nativeElement.querySelector('.error-msg');
+    expect(msg).toBeTruthy();
+    expect(msg.textContent).toContain('required');
   });
 
 });

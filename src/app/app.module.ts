@@ -12,7 +12,11 @@ import { FlightResultsComponent } from './tab-factory/flight-results/flight-resu
 import { SortResultsComponent } from './tab-factory/flight-results/sort-results/sort-results.component';
 import { FilterResultsComponent } from './tab-factory/flight-results/filter-results/filter-results.component';
 import { HttpClientModule } from '@angular/common/http';
+import { StoreModule } from '@ngrx/store';
 
+import { formReducer } from './tab-factory/flights/search-results.reducer';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment'
 
 @NgModule({
   declarations: [
@@ -30,7 +34,9 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    StoreModule.forRoot({ form: formReducer }),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent],

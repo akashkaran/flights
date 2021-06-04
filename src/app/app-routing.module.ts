@@ -6,6 +6,7 @@ import { FlightResultsComponent } from './tab-factory/flight-results/flight-resu
 const routes: Routes = [
   { path: '', component: HomePageComponent },
   { path: 'flights', component: FlightResultsComponent },
+  // loadChildren: () => import('./flights/flights.module').then(m => m.FlightssModule)
 ];
 
 @NgModule({

@@ -1,25 +1,34 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormService } from './form.service';
+import { Store } from '@ngrx/store';
+import { Observable, Subscription } from 'rxjs';
+
+
 @Component({
   selector: 'app-flight-results',
   templateUrl: './flight-results.component.html',
   styleUrls: ['./flight-results.component.scss']
 })
-export class FlightResultsComponent implements OnInit {
+export class FlightResultsComponent implements OnInit, OnDestroy {
   data: any;
   filteredData: any;
   showSort: boolean;
   showFilter: boolean;
   hideResults: boolean;
+  count$: Observable<any>;
+  searchSubs: Subscription;
   constructor(private router: Router,
-    private formService: FormService) { }
+    // private store: Store<{daparture:string, destination:string}>,
+    private formService: FormService) {
+      // this.count$ = this.store.select('daparture');
+     }
 
   ngOnInit(): void {
     this.hideResults = true;
     this.showFilter = false;
     this.showSort = false;
-    this.formService.getFlightResults().subscribe(res => {
+    this.searchSubs = this.formService.getFlightResults().subscribe(res => {
       this.hideResults = false;
       this.data = res['response']?.flights;
       this.filteredData = [...this.data];
@@ -131,6 +140,10 @@ export class FlightResultsComponent implements OnInit {
 
   filterData(params) {
     this.filteredData = this.filteredData.filter(data => (data.classData[0].fare >= params.min && data.classData[0].fare <= params.max));
+  }
+
+  ngOnDestroy(): void {
+    this.searchSubs.unsubscribe();
   }
 
 }

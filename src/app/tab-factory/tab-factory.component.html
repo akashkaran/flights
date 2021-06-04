@@ -1,15 +1,15 @@
 <div class="container">
     <div class="tabs-container">
-        <div [class.active]="selection == 'flights'" id="flights" (click)="selection ='flights'">
+        <div role="button" tabindex="0" [class.active]="selection == 'flights'" id="flights" (click)="selection ='flights'" (keydown)="selection ='flights'">
             <span class="material-icons-outlined">flight</span>Flights
         </div>
-        <div [class.active]="selection == 'hotels'" id="hotels" (click)="selection ='hotels'">
+        <div role="button" tabindex="0" [class.active]="selection == 'hotels'" id="hotels" (click)="selection ='hotels'" (keydown)="selection ='flights'">
             <span class="material-icons-sharp">business</span>Hotels
         </div>
-        <div [class.active]="selection == 'cars'" id="cars" (click)="selection ='cars'">
+        <div role="button" tabindex="0" [class.active]="selection == 'cars'" id="cars" (click)="selection ='cars'">
             <span class="material-icons-sharp">directions_car</span>Cars
         </div>
-        <div [class.active]="selection == 'activity'" id="activity" (click)="selection ='activity'">
+        <div role="button" tabindex="0" [class.active]="selection == 'activity'" id="activity" (click)="selection ='activity'">
             <span class="material-icons-sharp">outlined_flag</span>Activity
         </div>
     </div>

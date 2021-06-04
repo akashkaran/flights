@@ -1,9 +1,10 @@
 import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
-import { FormGroup, NgForm } from '@angular/forms';
+import { Form, FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { FormService } from '../flight-results/form.service';
 import { DatePipe } from '@angular/common';
-
+import { Store } from '@ngrx/store';
+import { formData} from './search-results.action'
 @Component({
   selector: 'app-flights',
   templateUrl: './flights.component.html',
@@ -15,35 +16,34 @@ export class FlightsComponent implements OnInit {
   minDate: string;
   sourceList: string[];
   classList: string[];
-  departure: any;
-  destination: any;
-  departdate: any;
-  returndate: any;
-  travelers: any;
-  class: any;
-  mainForm: FormGroup;
+  searchForm: FormGroup;
   showModal: boolean;
   adults: number = 1;
   children: number = 0;
   datePipe = new DatePipe('en-US');
   constructor(private router: Router,
+    // private store: Store<{form:Form}>,
     private formService: FormService,
+    private fb: FormBuilder,
     private eRef: ElementRef) {
-
+      // this.count$ = this.store.select(formData.bind);
   }
+  
 
   ngOnInit(): void {
     this.minDate = this.datePipe.transform(new Date(), 'yyyy-MM-dd');
     this.sourceList = ['(MUM)Mumbai', '(PNQ)Pune', '(GOA)Goa', '(DEL)Delhi'];
     this.classList = ['basic', 'economy', 'main'];
-
+    this.searchForm = this.fb.group({
+      departure: ['', Validators.required],
+      destination: ['', Validators.required],
+      departdate: ['', Validators.required],
+      returndate: ['', Validators.required],
+      travelers: ['',],
+      class: ['', Validators.required],
+    })
     if (this.formService.formData) {
-      this.departure = this.formService.formData.departure;
-      this.destination = this.formService.formData.destination;
-      this.departdate = this.formService.formData.departdate;
-      this.returndate = this.formService.formData.returndate;
-      this.travelers = this.formService.formData.travelers;
-      this.class = this.formService.formData.class;
+       this.searchForm.reset(this.formService.formData);
     }
 
 
@@ -51,13 +51,33 @@ export class FlightsComponent implements OnInit {
   }
 
   gotoResults(params) {
-    params.form?.markAllAsTouched();
+    params.markAllAsTouched();
     if (params.valid) {
       const allData = { ...params.value, travelers: `Adults${this.adults}, Children${this.children}` }
       this.formService.formData = allData;
+      // this.store.dispatch(formData({ form:allData }));
       localStorage.setItem('form', JSON.stringify(allData));
       this.router.navigate(['flights']);
     }
+  }
+
+  get departure() {
+    return this.searchForm.get('departure');
+  }
+  get destination() {
+    return this.searchForm.get('destination');
+  }
+  get departdate() {
+    return this.searchForm.get('departdate');
+  }
+  get returndate() {
+    return this.searchForm.get('returndate');
+  }
+  get travelers() {
+    return this.searchForm.get('travelers');
+  }
+  get class() {
+    return this.searchForm.get('class');
   }
 
 
