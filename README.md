@@ -9,10 +9,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ![image](https://user-images.githubusercontent.com/22548364/120884754-b7c04f00-c602-11eb-98b7-63d8cebd6734.png)
 
 
-
 #Flights results
 
-![image](https://user-images.githubusercontent.com/22548364/120884678-22bd5600-c602-11eb-81e5-5bbb58405735.png)
+![image](https://user-images.githubusercontent.com/22548364/120884770-cf97d300-c602-11eb-96ef-d2f53a1d2ddc.png)
 
 
 #Sort
