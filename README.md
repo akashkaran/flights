@@ -4,6 +4,18 @@ Flight searching mobile app UI build using angular, css/scss and javascript from
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.2.
 
+Homepage
+![image](https://user-images.githubusercontent.com/22548364/120882528-1af7b480-c5f6-11eb-8a62-ebd992bc4b56.png)
+
+Flights results
+![image](https://user-images.githubusercontent.com/22548364/120882541-277c0d00-c5f6-11eb-9121-03a7dedcb1b1.png)
+
+Sort
+![image](https://user-images.githubusercontent.com/22548364/120882554-38c51980-c5f6-11eb-9b5c-eb1553b97c34.png)
+
+Filter
+![image](https://user-images.githubusercontent.com/22548364/120882563-45497200-c5f6-11eb-927d-f1a4f5f49216.png)
+
 
 ![image](https://user-images.githubusercontent.com/22548364/120882507-02879a00-c5f6-11eb-9894-4326588e3899.png)
 
