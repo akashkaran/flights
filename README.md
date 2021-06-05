@@ -4,6 +4,9 @@ Flight searching mobile app UI build using angular, css/scss and javascript from
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.2.
 
+
+![image](https://user-images.githubusercontent.com/22548364/120882507-02879a00-c5f6-11eb-9894-4326588e3899.png)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
