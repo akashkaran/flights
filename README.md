@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 #Homepage
 
-![image](https://user-images.githubusercontent.com/22548364/120884667-0de0c280-c602-11eb-8d59-8de243357ab4.png)
+![image](https://user-images.githubusercontent.com/22548364/120884754-b7c04f00-c602-11eb-98b7-63d8cebd6734.png)
 
 
 
