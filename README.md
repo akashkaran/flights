@@ -11,16 +11,20 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 
 #Flights results
+
 ![image](https://user-images.githubusercontent.com/22548364/120884678-22bd5600-c602-11eb-81e5-5bbb58405735.png)
 
 
 #Sort
+
 ![image](https://user-images.githubusercontent.com/22548364/120882554-38c51980-c5f6-11eb-9b5c-eb1553b97c34.png)
 
 #Filter
+
 ![image](https://user-images.githubusercontent.com/22548364/120882563-45497200-c5f6-11eb-927d-f1a4f5f49216.png)
 
 #Test Coverage
+
 ![image](https://user-images.githubusercontent.com/22548364/120882507-02879a00-c5f6-11eb-9894-4326588e3899.png)
 
 ## Development server
